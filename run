@@ -4,5 +4,5 @@
 
 echo -e "To run:\n./run k [file_testing] [file_training]\n\nRunning...\n"
 python knn.py $1 $2 $3
-cat testing_k$1 
-cat testing_k$1 | accuracy.pl 
+cat testing_k$1
+cat testing_k$1 | accuracy.pl
