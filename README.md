@@ -4,7 +4,7 @@
 
 I used the `pearsonr` function to get the correlation between homicide rate and all the other factors. I ended up determiniming that `GOV` had the greatest influence because the `pearsonr` correlation factor was the highest. To run the function:
 
-python 2a.py
+	python 2a.py
 
 The results are as follows:
 
