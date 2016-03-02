@@ -19,14 +19,9 @@ The results are as follows:
 | HE | 0.91340626501869626 | 1.2894523436469096e-05 |
 | WE | 0.88815258210630621 | 5.0114380369048699e-05 |
 
+I included a picture of the graph of the `GOV` column so you can see that it's most highly correlated with `WE`, `FTP` and `HOM`.
 
-
-
-
-
-
-
-
+![GOV](2a.png)
 
 ## Part B
 
