@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# python process_znorm.py crx.data.training crx.data.testing
-
 echo -e "To run:\n./run k [file_testing] [file_training]\n\nRunning...\n"
 python knn.py $1 $2 $3
 cat testing_k$1

@@ -1,5 +1,35 @@
 # Homework 2 Programming Part
 
+## Part A
+
+I used the `pearsonr` function to get the correlation between homicide rate and all the other factors. I ended up determiniming that `GOV` had the greatest influence because the `pearsonr` correlation factor was the highest. To run the function:
+
+python 2a.py
+
+The results are as follows:
+
+| Column    | Pearsonr Coefficient   |
+| ----- | --------------- |
+| UEMP | 0.21014174585806875 | 0.49076686344682885 |
+| MAN | 0.54642268793308635 | 0.053341733728136047 |
+| LIC | 0.72630540041622227 | 0.0049312511726717981 |
+| GR | 0.81628727259413125 | 0.00066418184428171866 |
+| NMAN | 0.95593474270226997 | 3.4106187302865251e-07 |
+| GOV | 0.95805455979551823 | 2.6112711142666157e-07 |
+| HE | 0.91340626501869626 | 1.2894523436469096e-05 |
+| WE | 0.88815258210630621 | 5.0114380369048699e-05 |
+
+
+
+
+
+
+
+
+
+
+## Part B
+
 I created an executable `process` which can be run to pre-process the data. It fills in gaps and normalizes the data using znorm. Run it like so:
 
 	./processed crx.data.training crx.data.testing
