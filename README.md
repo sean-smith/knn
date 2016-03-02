@@ -39,18 +39,32 @@ This will produce a file `testing_k3` which can be piped into the program `accur
 
 	cat testing_k3 | perl accuracy.pl
 
+Since the last column of the file for `lenses.testing` is slightly different, you need to run `accuracy_lenses.pl` instead. Note you need to uncomment this line in `run` for `run` to display correctly for lenses dataset.
+
+	cat testing_k3 | perl accuracy_lenses.pl
+
 The results from 1 <= k <= 10 for `crx.testing.processed` are in the file `results.csv` and listed below:
 
 
-| K     | Accuracy Rate   |
-| ----- | --------------- |
-| 1 | 0.826086956521739 |
-| 2 | 0.826086956521739 |
-| 3 | 0.855072463768116 |
-| 4 | 0.847826086956522 |
-| 5 | 0.847826086956522 |
-| 6 | 0.869565217391304 |
-| 7 | 0.847826086956522 |
-| 8 | 0.833333333333333 |
-| 9 | 0.86231884057971 |
-| 10 | 0.847826086956522 |
+| K     |  CRX Accuracy Rate | Lenses Accuracy Rate |
+| ----- | --------------- | --------------- |
+| 1 | 0.826086956521739 | .6667 |
+| 2 | 0.826086956521739 | .6667 |
+| 3 | 0.855072463768116 | .8333 |
+| 4 | 0.847826086956522 | .6667 |
+| 5 | 0.847826086956522 | .5 |
+| 6 | 0.869565217391304 | .5 |
+| 7 | 0.847826086956522 | .6667 |
+| 8 | 0.833333333333333 | .6667 |
+| 9 | 0.86231884057971 | .5 |
+| 10 | 0.847826086956522 | .5 |
+
+Note that this can all be run by:
+
+	make crx
+
+Or:
+	
+	make lenses
+
+Default value for `k` is three but this can be changed in the makefile.

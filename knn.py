@@ -19,15 +19,11 @@ def nearest_neighbors(k, r, b, l):
 		label = r_2[1][l-1]
 		heappush(h, (distance(r, r_2), label))
 
-	plus = 0
-	minus = 0
+	lst = []
 	for i in range(int(k)):
 		d, label = heappop(h)
-		if label == "+":
-			plus += 1
-		else:
-			minus += 1
-	return "+" if plus > minus else "-"
+		lst += [label]
+	return max(set(lst), key=lst.count)
 
 def distance(a,b):
 	d_sum = 0

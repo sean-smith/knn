@@ -40,11 +40,11 @@ if len(sys.argv) > 1:
 		df = znorm(df)
 		if file == "crx.data.testing":
 			outfile = "crx.testing.processed"
-		else if file == "crx.data.training":
+		elif file == "crx.data.training":
 			outfile = "crx.training.processed"
-		else if file == "lenses.testing":
+		elif file == "lenses.testing":
 			outfile = "lenses.testing.processed"
-		else if file == "lenses.training":
+		elif file == "lenses.training":
 			outfile = "lenses.training.processed"
 		df.to_csv(outfile, header=False, index=False)
 else:

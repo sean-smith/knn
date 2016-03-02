@@ -2,21 +2,15 @@
 
 k = 3
 
-crx: preprocess run show
+crx: preprocess run_
 
-lenses: lenses_preprocess run_lenses show
+lenses: run_lenses
 
 preprocess:
-	./processed crx.data.training crx.data.testing
+	./process crx.data.training crx.data.testing
 
-lenses_preprocess:
-	./processed lenses.training lenses.testing
-
-run:
+run_:
 	./run $(k) crx.testing.processed crx.training.processed
 
 run_lenses:
-	./run $(k) lenses.testing.processed lenses.training.processed
-
-show:
-	cat testing_k$(k) | perl accuracy.pl
+	./run $(k) lenses.testing lenses.training

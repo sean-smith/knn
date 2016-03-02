@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo -e "To run type:\n./processed crx.data.training crx.data.testing\nRunning on $1 and $2..."
+echo -e "To run type:\n./processed crx.data.training crx.data.testing\nRunning on $1 and $2...\n"
 
-echo -e "\nOutputing processed data from $1 to crx.training.processed and $2 to crx.testing.processed"
+echo -e "\nOutputing processed data"
+echo -e "$1 => crx.training.processed\n$2 => crx.testing.processed"
 python process_znorm.py $1 $2
 
